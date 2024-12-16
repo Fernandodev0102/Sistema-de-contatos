@@ -1,0 +1,35 @@
+<!-- 
+ Autor: Fernando Pereira Alves
+ GitHub: @Fernandodev0102
+ Contato: 85976014779 -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Cadastro.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Contato</h1>
+        <form action="{{ url_for('adicionar') }}" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="numero">Número:</label>
+            <input type="tel" id="numero" name="numero" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <a href="{{ url_for('listar') }}" class="btn-lista">Ver Lista de Contatos</a>
+    </div>
+</body>
+</html>

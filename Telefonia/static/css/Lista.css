@@ -1,0 +1,66 @@
+
+ /* Autor: Fernando Pereira Alves
+ GitHub: @Fernandodev0102
+ Contato: 85976014779 
+ */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background-color: #555;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+th {
+    background-color: #555;
+}
+
+.btn-deletar {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-deletar:hover {
+    background-color: #555;
+}

@@ -1,0 +1,50 @@
+<!-- 
+ Autor: Fernando Pereira Alves
+ GitHub: @Fernandodev0102
+ Contato: 85976014779 -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Lista.css') }}">
+</head>
+<body>
+    <h1>Lista de Contatos</h1>
+    
+    <!-- Botão Voltar para a página inicial -->
+    <a href="/" class="btn-voltar">Voltar para a página inicial</a>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Número</th>
+                <th>Cidade</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contato in contatos %}
+                <tr>
+                    <td>{{ contato[0] }}</td>
+                    <td>{{ contato[1] }}</td>
+                    <td>{{ contato[2] }}</td>
+                    <td>
+                        <!-- Botão Deletar com a classe de estilo -->
+                        <a href="{{ url_for('deletar', numero=contato[1]) }}" class="btn-deletar" onclick="return confirm('Tem certeza de que deseja excluir este contato?');">Deletar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
